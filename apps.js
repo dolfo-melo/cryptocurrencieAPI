@@ -31,22 +31,18 @@ async function conectarApi() {
                     coinsData.forEach((coins) => {
                         cryptoCoins += "<tr>"
                         cryptoCoins += `<th scope="row">${coins.rank}</th>`
-                        cryptoCoins += `<td><img src=${coins.iconUrl} width="50px" height="50px"></td>`
+                        cryptoCoins += `<td><img src=${coins.iconUrl} width="36px" height="36px"></td>`
                         cryptoCoins += `<td>${coins.name}</td>`
-                        cryptoCoins += `<td>${Math.fround(coins.price)} $</td>`
                         cryptoCoins += `<td>${coins.symbol}</td>`
-                        cryptoCoins += `<td>${Math.fround(coins.marketCap)} $</td>`;"</td>";
+                        cryptoCoins += `<td>${Math.fround(coins.price)} $</td>`
+                        cryptoCoins += `<td>${Math.fround(coins.marketCap).toFixed(0)} $</td>`;"<td>";
                     })
-                        document.getElementById('data').innerHTML = cryptoCoins
+                        document.getElementById("data").innerHTML = cryptoCoins
                 })
             }
         })
         .catch((error) => {console.log(error)})
     
-    // preenchimentoDados(retorno)
 }
 conectarApi()
 
-// function preenchimentoDados(retorno){
-//     console.log(retorno.)
-// }

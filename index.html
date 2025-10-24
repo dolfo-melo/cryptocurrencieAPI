@@ -5,33 +5,53 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="assets/logo.png">
     <title>buscaCrypto</title>
 </head>
 <body>
     <nav class="navbar bg-body-tertiary">
-        <div class="container-fluid justify-content-center">
+        <div class="container-fluid justify-content-around">
             <a class="navbar-brand" href="#">
-            <img src="" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-           buscaCrypto
+            <img src="assets/logo.png" alt="Logo" width="100" height="100" class="d-inline-block align-text-top">
             </a>
+            <form class="d-flex w-15" role="search">
+                <input class="form-control me-3 w-70" type="search" placeholder="Digite sua cripto" aria-label="Search"/>
+                <button class="btn btn-outline-warning w-50" type="submit" onclick="infoCrypto()">Pesquisar</button>
+            </form>
         </div>
 </nav>
     <main> 
-       <div class="container top-300 position-relative">
-           <table class="table table-bordeless container position-relative" style="margin-top: 300px;">
-            <thead class="table-group-divider top-300">
-                <tr>
-                    <th scope="col">Ranking</th>
-                    <th scope="col">Imagem</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Preço</th>
-                    <th scope="col">Símbolo</th>
-                    <th scope="col">Volume</th>
-                    <th scope="col">MarketCap</th>
-                </tr>
-            </thead>
-            <tbody id="data">
-            </tbody>
+        <div class="modal moreInfos" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title"></h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body" id="cryptoInfo">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div class="container">
+            <br>
+            <table class="table table-bordeless container text-center">
+                <thead class="table-group-divider">
+                    <tr>
+                        <th scope="col">Ranking</th>
+                        <th scope="col">Imagem</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Símbolo</th>
+                        <th scope="col">Preço</th>
+                        <th scope="col">MarketCap</th>
+                    </tr>
+                </thead>
+                <tbody id="data"></tbody>
            </table>
        </div>
    </main> 

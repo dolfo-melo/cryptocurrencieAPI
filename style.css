@@ -8,22 +8,11 @@
 }
 
 *{
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
     overflow-x: hidden;
 }
 
 main{
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #074F57;
-}
-
-table{
-    margin-bottom: 500px;
+    background-image: url(assets/background.jpg);
+    background-size: cover;
+    background-position: 70%;
 }
