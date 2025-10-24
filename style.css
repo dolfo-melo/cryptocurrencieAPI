@@ -1,9 +1,10 @@
+/* Background e Configuração Geral */
 :root{
     --corUm: #074F57;
     --corDois: #074F57;
     --corTres: #74A57F;
-    --corQuatro: #9ECE9A;
-    --corCinco: #074F57;
+    --corQuatro: rgb(158, 206, 154);
+    --corCinco: rgb(7, 79, 87);
 }
 
 *{
@@ -11,6 +12,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 main{
@@ -36,32 +38,58 @@ main{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgba(0,0,250,0.5);
+    background-color: rgba(158, 206, 154,0.3);
 }
 
 .content{
     width: 500px;
     height: 500px;
-    background-color: red;
+    background-color: rgba(7, 79, 87,0.8);
+    border-radius: 30px;
 }
-
-.containerOne{
+/* Subcontainers */
+.container{
+    width: 100%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
-.containerTwo{
+.box{
+    width: 80%;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: #74A57F;
+    gap: 30px;
 }
 
-.containerThree{
+.search{
+    width: 100%;
+    height: 50px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
+    background-color:blue;
+}
+
+.search label{
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    font-style: oblique;
+}
+
+.info{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color:blue;
 }

@@ -7,25 +7,48 @@
     <title>Pesquisa Cripto</title>
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="headerLogo" href=""><img src="" alt="headerLogo"></a>
+            <a class="moreInfo" href="">Moedas mais valorizadas</a>
+        </nav>
+    </header>
    <main>
        <video class="videoBackground" autoplay muted loop>
            <source src="assets/background.mp4" type="video/mp4">
        </video>
         <div class="mainContainer">
+
             <div class="content">
-                <div class="containerOne">
-                    <label for="searchCurrency"></label>
-                    <input type="text" id="searchCurrency" placeholder="Pesquisa a criptomoeda">
-                    <button class="btn" onclick="">Pesquisar</button>
+
+                <div class="container">
+
+                    <label for="searchCurrency">Conversão</label>
+                    <div class="box">
+
+                        <div class="search">
+                            <input type="text" id="searchCurrency" placeholder="Pesquisa a criptomoeda">
+                            <img class="btn" src="" alt="mainCurrency">
+                        </div>
+
+                        <div class="info">
+                            <img class="btn" src="" alt="searchIcon">
+                            <input type="text" id="convertCurrency">
+                        </div>
+
+                    </div>
+
+                    <button class="convertBtn" onclick="searchCrypto()"></button>
+
                 </div>
-                <div class="containerTwo">
-                    <h2>Informação Importantes</h2>
-                </div>
-                <div class="containerThree">
-                    <h2>Top 10 cripto</h2>
-                </div>
+
             </div>
+            
         </div>
    </main> 
+   <footer>
+
+   </footer>
 </body>
+<script src="apps.js" defer></script>
 </html>
