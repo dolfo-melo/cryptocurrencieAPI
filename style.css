@@ -12,7 +12,7 @@
 }
 
 main{
-    background-image: url(assets/background.jpg);
+    background-image: url(assets/mainBackground.png);
     background-size: cover;
-    background-position: 70%;
+    background-position: 65%;
 }
