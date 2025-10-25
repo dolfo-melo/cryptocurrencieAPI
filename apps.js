@@ -23,19 +23,17 @@ async function conectarApi() {
 
                     let coinsData = json.data.coins
 
-                    if(coinsData.lenght > 0){
-                        var cryptoCoins = ""
-                    }
-
+                    let cryptoCoins = ""
+                   
                     // For Loop
                     coinsData.forEach((coins) => {
                         cryptoCoins += "<tr>"
                         cryptoCoins += `<th scope="row">${coins.rank}</th>`
                         cryptoCoins += `<td><img src=${coins.iconUrl} width="36px" height="36px"></td>`
                         cryptoCoins += `<td>${coins.name}</td>`
-                        cryptoCoins += `<td>${coins.symbol}</td>`
-                        cryptoCoins += `<td>${Math.fround(coins.price)} $</td>`
-                        cryptoCoins += `<td>${Math.fround(coins.marketCap).toFixed(0)} $</td>`;"<td>";
+                        cryptoCoins += `<td> ${coins.symbol}</td>`
+                        cryptoCoins += `<td>$ ${Math.fround(coins.price)}</td>`
+                        cryptoCoins += `<td>$ ${Math.fround(coins.marketCap).toFixed(2)}</td>`;"<td>";
                     })
                         document.getElementById("data").innerHTML = cryptoCoins
                 })

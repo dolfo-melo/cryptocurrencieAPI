@@ -1,18 +1,26 @@
-/* Background e Configuração Geral */
-:root{
-    --corUm: #074F57;
-    --corDois: #074F57;
-    --corTres: #74A57F;
-    --corQuatro: rgb(158, 206, 154);
-    --corCinco: rgb(7, 79, 87);
-}
-
 *{
     overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+strong{
+    font-size: 32px;
+    font-weight: bold;
+    color: #e2711d;
 }
 
 main{
     background-image: url(assets/mainBackground.png);
     background-size: cover;
     background-position: 65%;
+}
+
+table{
+    margin-top: 100px;
 }
